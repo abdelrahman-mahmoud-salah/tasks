@@ -1,0 +1,13 @@
+import 'package:task/core/services/api_error_handler.dart';
+import 'package:task/features/home/bookings/data/models/all_bookings_response_model.dart';
+import 'package:task/features/home/bookings/domain/repositories/booking_repository.dart';
+
+class GetAllBookingsUseCase {
+  final BookingRepository _bookingRepository;
+
+  GetAllBookingsUseCase(this._bookingRepository);
+
+  Future<ApiResult<AllBookingsResponseModel>> call() async {
+    return await _bookingRepository.getAllBookings();
+  }
+}

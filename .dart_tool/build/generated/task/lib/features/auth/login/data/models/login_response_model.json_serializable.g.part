@@ -1,0 +1,13 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) =>
+    LoginResponseModel(
+      LoginDataModel.fromJson(json['data'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$LoginResponseModelToJson(LoginResponseModel instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };

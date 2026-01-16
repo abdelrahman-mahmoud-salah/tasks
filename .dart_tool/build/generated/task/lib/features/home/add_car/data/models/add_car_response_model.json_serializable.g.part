@@ -1,0 +1,16 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+AddCarResponseModel _$AddCarResponseModelFromJson(Map<String, dynamic> json) =>
+    AddCarResponseModel(
+      status: (json['status'] as num?)?.toInt(),
+      message: json['message'] as String?,
+    );
+
+Map<String, dynamic> _$AddCarResponseModelToJson(
+        AddCarResponseModel instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+    };
